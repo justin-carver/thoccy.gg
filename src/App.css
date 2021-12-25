@@ -1,8 +1,24 @@
 .App {
-  font-family: 'Varela Round', sans-serif;
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  font-family: 'Varela Round', sans-serif;
   justify-content: center;
-  margin: 10em;
+  margin-top: 2em;
+  padding: 5em;
+}
+
+.blank-key {
+  width: 3rem;
+}
+
+.carat {
+  background-color: #FEFEFE;
+  display: inline-block;
+  height: 2.7rem;
+  margin-left: 0.5rem;
+  margin-top: 0.7rem;
+  width: 1rem;
 }
 
 .light-mode {
@@ -13,28 +29,95 @@
   color: #FEFEFE;
 }
 
-.thocc-wrapper {
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
   width: 70%;
 }
 
-.thocc-wrapper header {
-  display: inline-flex;
-  flex-direction: row;
+.header-wrapper header {
+  display: flex;
 }
 
-.thocc-wrapper .logo {
-  font-size: 2rem;
+.header-wrapper .logo {
+  font-size: 3rem;
   letter-spacing: 0.2rem;
-  margin-top: 0.2em;
+  margin-top: 0.1em;
 }
 
-.thocc-wrapper header img {
+.header-wrapper header img {
   margin-right: 1em;
+  width: 4em;
+}
+
+.Key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 3em;
+  height: 3em;
+  border: solid 2px #FEFEFE;
+  border-radius: 0.4rem;
+}
+
+.key-glyph {
+  font-size: 1rem;
+}
+
+.left-side {
+  min-width: 40%;
+}
+
+.new-line {
+  height: 0px;
 }
 
 .subtitle {
   color: #FEFEFE;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.05em;
 } 
+
+.intro {
+  color: #9677DF;
+  width: 90%;
+}
+
+.Thoccy {
+  display: flex;
+  justify-content: space-between;
+  color: #FEFEFE;
+  width: 70%;
+  height: auto;
+}
+
+.typing-area {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  min-width: 30%;
+  width: 60%;
+}
+
+.typing-area textarea {
+  -moz-box-shadow: 0px 4px 21px -6px rgba(0,0,0,0.42);
+  -webkit-box-shadow: 0px 4px 21px -6px rgba(0,0,0,0.42);
+  background-color: #353C45;
+  border-radius: 0.5rem;
+  border: solid #9677DF 2px;
+  box-shadow: 0px 4px 21px -6px rgba(0,0,0,0.42);
+  color: #FEFEFE;
+  height: 5em;
+  padding: 1rem;
+  resize: none;
+  text-align: left;
+  width: 100%;
+}
+
+.typing-area .wpm {
+  color: #FEFEFE;
+  font-size: 0.7rem;
+  opacity: 0.3;
+  padding: 0.5rem;
+}

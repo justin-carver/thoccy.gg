@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import TypingArea from './TypingArea';
 
-const Thoccy = () => {
+const Header = () => {
     
     const getCurrentDate = () => {
         let today = new Date();
@@ -12,11 +13,12 @@ const Thoccy = () => {
     }
 
     return (
-    <div className="thocc-wrapper">
+        <div className="header-wrapper">
         <div className="left-side">
             <header className="dark-mode">
                 <motion.img src='img/keyboard.png' whileHover={{rotate : 360}}/>
-                <span className="logo">thoccy.gg<motion.span animate={{
+                <span className="logo">thoccy.gg</span>
+                <motion.span className="carat" animate={{ // ? Should this be a variant?
                     opacity : 1,
                 }}
                 initial = {{
@@ -28,15 +30,14 @@ const Thoccy = () => {
                     stiffness : 100,
                     duration : 0.3,
                     yoyo : Infinity,
-                }}>|</motion.span></span>
+                }}></motion.span>
             </header>
             <p className="subtitle">Testing keyboards since {getCurrentDate()}!</p>
+            <p className="subtitle intro">Use this website to test your keyboards button presses and switch functionality.</p>
         </div>
-        <div className="right-side">
-            <input type="text" />
-        </div>
+        <TypingArea />
     </div>
     );
 }
 
-export default Thoccy;
+export default Header;
