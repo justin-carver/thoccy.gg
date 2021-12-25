@@ -1,0 +1,40 @@
+.App {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 10em;
+}
+
+.light-mode {
+  color: #000;
+}
+
+.dark-mode {
+  color: #FEFEFE;
+}
+
+.thocc-wrapper {
+  width: 70%;
+}
+
+.thocc-wrapper header {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.thocc-wrapper .logo {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0.2em;
+}
+
+.thocc-wrapper header img {
+  margin-right: 1em;
+  width: 3em;
+}
+
+.subtitle {
+  color: #FEFEFE;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+} 
