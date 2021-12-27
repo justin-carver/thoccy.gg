@@ -9,18 +9,18 @@ const Thoccy = () => {
 
     // Create new "keyLength" prop to pass to CSS width properties for big keys. {Shift, Tab, Enter, Space}
     const xmlToReact = new XMLToReact({
-        layout : (attrs) => ({ type: 'div', props: {...attrs, className : "layout"}}),
+        layout : (attrs) => ({ type: motion.div, props: {...attrs, className : "layout"}}),
         row: (attrs) => ({ type: motion.div, props: {...attrs, className : "row"}}),
-        keyGroup: (attrs) => ({ type: 'div', props: {...attrs, className : "key-group", transition : { staggerChildren : 0.5}} }),
+        keyGroup: (attrs) => ({ type: motion.div, props: {...attrs, className : "key-group"}}),
         key : (attrs) => ({ type: Key, props : {...attrs, className : "Key"}})
     });
 
     const reactTree = xmlToReact.convert(english60);
 
     return (
-        <div className="Thoccy">
+        <motion.div className="Thoccy">
             { reactTree }
-        </div>
+        </motion.div>
     );
 }
 

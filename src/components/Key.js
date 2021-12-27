@@ -9,19 +9,22 @@ const Key = (props) => {
     // Spawn stagger is currently not working...
     const spawnVariant = {
         animate : {
-            opacity : 1
+            opacity : 1,
         },
         initial : {
-            opacity : 0
+            opacity : 0,
+            borderColor : '#FEFEFE'
         },
-        transition : {
-            type : "spring",
-            staggerChildren : 0.3
+        hover : {
+            borderColor: '#FF00FF',
+            transition : {
+                duration : 0.2
+            }
         }
     };
 
     return (
-        <motion.div className="Key" initial="initial" animate="animate" variants={spawnVariant}>
+        <motion.div className={`Key ${props.size}`} initial="initial" animate="animate" variants={spawnVariant} whileHover="hover">
             <span className="key-glyph">{props.glyph}</span>
         </motion.div>
     );

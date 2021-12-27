@@ -1,8 +1,8 @@
 // ! May need to include 'size=' attribute for custom key lengths (widths).
 let english60 = `<layout>
-<row>
+<row animate=''>
     <keyGroup>
-        <key glyph="ESC" keyCode="112" />
+        <key glyph="ESC" keyCode="" />
     </keyGroup>
     <keyGroup>
         <key glyph="F1" keyCode="" />
@@ -32,7 +32,7 @@ let english60 = `<layout>
 </row>
 <row>
     <keyGroup>
-        <key glyph="EC" keyCode="12" />
+        <key glyph="TAB" keyCode="12" size="tab"/>
         <key glyph="" keyCode="" />
         <key glyph="" keyCode="" />
         <key glyph="" keyCode="" />

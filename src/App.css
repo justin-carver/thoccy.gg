@@ -69,15 +69,11 @@
 .key-group {
   display: flex;
   flex-direction: row;
-  margin: 1rem;
+  margin-right: 2rem;
 }
 
 .left-side {
   min-width: 40%;
-}
-
-.new-line {
-  height: 0px;
 }
 
 .subtitle {
@@ -94,7 +90,13 @@
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  margin-top: 1rem;
+}
+
+.tab {
+  width: 5rem;
 }
 
 .Thoccy {
