@@ -15,7 +15,17 @@ const TypingArea = () => {
             initial={{
                 opacity : 0
             }}/>
-            <span className="wpm">wpm: </span>
+            <span className="wpm">wpm: 108</span>
+            <div className="options">
+                <form>
+                    <label>
+                        Setting: <input type="checkbox" name=""/>
+                    </label>
+                    <label>
+                        Setting: <input type="checkbox" name=""/>
+                    </label>
+                </form>
+            </div>
         </div>
     );
 }

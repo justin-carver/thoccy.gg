@@ -52,17 +52,24 @@
 }
 
 .Key {
-  display: flex;
   align-items: center;
+  border-radius: 0.4rem;
+  border: solid 2px #FEFEFE;
+  display: flex;
+  height: 3em;
   justify-content: center;
   width: 3em;
-  height: 3em;
-  border: solid 2px #FEFEFE;
-  border-radius: 0.4rem;
+  margin: 0.35rem;
 }
 
 .key-glyph {
   font-size: 1rem;
+}
+
+.key-group {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
 }
 
 .left-side {
@@ -84,17 +91,22 @@
   width: 90%;
 }
 
-.Thoccy {
+.row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Thoccy {
   color: #FEFEFE;
-  width: 70%;
+  display: flex;
   height: auto;
+  width: 70%;
 }
 
 .typing-area {
-  display: flex;
   align-items: flex-end;
+  display: flex;
   flex-direction: column;
   min-width: 30%;
   width: 60%;
@@ -118,6 +130,16 @@
 .typing-area .wpm {
   color: #FEFEFE;
   font-size: 0.7rem;
-  opacity: 0.3;
+  margin-top: 0.5rem;
+  opacity: 0.4;
   padding: 0.5rem;
+}
+
+.options {
+  color: #FEFEFE;
+}
+
+.options form label {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
 }

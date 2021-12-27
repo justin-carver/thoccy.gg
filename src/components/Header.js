@@ -13,7 +13,12 @@ const Header = () => {
     }
 
     return (
-        <div className="header-wrapper">
+        <motion.div className="header-wrapper" animate={{
+            opacity : 1
+        }}
+        initial={{
+            opacity : 0
+        }}>
         <div className="left-side">
             <header className="dark-mode">
                 <motion.img src='img/keyboard.png' whileHover={{rotate : 360}}/>
@@ -36,7 +41,7 @@ const Header = () => {
             <p className="subtitle intro">Use this website to test your keyboards button presses and switch functionality.</p>
         </div>
         <TypingArea />
-    </div>
+    </motion.div>
     );
 }
 
