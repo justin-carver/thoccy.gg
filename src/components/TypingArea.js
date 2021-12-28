@@ -11,16 +11,15 @@ const TypingArea = () => {
     }, []);
 
     return (
-        // getPlaceholder getting called on every key press??
-        <div className="typing-area">
+        <div className="TypingArea">
             <motion.textarea type="text" placeholder={taPlaceholder} animate={{
                 opacity : 1
             }}
             initial={{
                 opacity : 0
             }}/>
-            <span className="wpm">wpm: 108</span>
-            <div className="options">
+            <span className="TypingArea__wpm">wpm: 108</span>
+            <div className="TypingArea__options">
                 <form>
                     <label>
                         Setting: <input type="checkbox" name=""/>

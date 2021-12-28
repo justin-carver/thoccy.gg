@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
 
-// TODO: Verify what support is like for multiple languages / fonts.
 const Key = (props) => {
-
-    // ? Key should only take in really 3 different values as an obj:
-    // ? { glyph, keyCode, state = held / pressed / unpressed }
 
     // Spawn stagger is currently not working...
     const spawnVariant = {
@@ -13,20 +9,20 @@ const Key = (props) => {
         },
         initial : {
             opacity : 0,
-            borderColor : '#FEFEFE'
+            borderColor : '#FEFEFE',
         },
         hover : {
-            borderColor: '#FF00FF',
+            backgroundColor : 'rgba(200, 200, 200, 0.5)',
             transition : {
-                duration : 0.2,
+                duration : 0.1
             }
         }
     };
 
     return (
-        <motion.div className={`Key blank ${props.size}`} id={props.keyCode} tabIndex="0" initial="initial" animate="animate" variants={spawnVariant} whileHover="hover">
-            <span className="key-glyph">{props.glyph}</span>
-            {props.secondGlyph !== null ? <span className="key-glyph-sec">{props.secondGlyph}</span> : null}
+        <motion.div className={`Thoccy__Key Thoccy__Key--blank Thoccy__Key--${props.size}`} id={props.keyCode} initial="initial" animate="animate" variants={spawnVariant} whileHover="hover">
+            <span className="Thoccy__Key--key-glyph">{props.glyph}</span>
+            {props.secondGlyph !== null ? <span className="Thoccy__Key--key-glyph-sec">{props.secondGlyph}</span> : null}
         </motion.div>
     );
 }

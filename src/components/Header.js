@@ -13,35 +13,35 @@ const Header = () => {
     }
 
     return (
-        <motion.div className="header-wrapper" animate={{
-            opacity : 1
-        }}
-        initial={{
-            opacity : 0
+        <motion.div className="Header" animate={{
+                opacity : 1
+            }}
+            initial={{
+                opacity : 0
         }}>
-        <div className="left-side">
-            <header className="dark-mode">
-                <motion.img src='img/keyboard.png' whileHover={{rotate : 360}}/>
-                <span className="logo">thoccy.gg</span>
-                <motion.span className="carat" animate={{ // ? Should this be a variant?
-                    opacity : 1,
-                }}
-                initial = {{
-                    opacity : 0,
-                    delay : 0.3
-                }}
-                transition = {{
-                    type : "spring",
-                    stiffness : 100,
-                    duration : 0.3,
-                    yoyo : Infinity,
-                }}></motion.span>
-            </header>
-            <p className="subtitle">Testing keyboards since {getCurrentDate()}!</p>
-            <p className="subtitle intro">Use this website to test your keyboards button presses and switch functionality.</p>
-        </div>
-        <TypingArea />
-    </motion.div>
+            <div className="Header__left-side">
+                <header className="Header__left-side--dark-mode">
+                    <motion.img src='img/keyboard.png' whileHover={{rotate : 360}}/>
+                    <span className="Header__logo">thoccy.gg</span>
+                    <motion.span className="Header__carat" animate={{ // ? Should this be a variant?
+                        opacity : 1,
+                    }}
+                    initial = {{
+                        opacity : 0,
+                        delay : 0.3
+                    }}
+                    transition = {{
+                        type : "spring",
+                        stiffness : 100,
+                        duration : 0.3,
+                        yoyo : Infinity,
+                    }}></motion.span>
+                </header>
+                <p className="Header__subtitle">Testing keyboards since {getCurrentDate()}!</p>
+                <p className="Header__subtitle Header__intro">Use this website to test your keyboards button presses and switch functionality.</p>
+            </div>
+            <TypingArea />
+        </motion.div>
     );
 }
 
