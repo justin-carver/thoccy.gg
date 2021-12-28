@@ -46,7 +46,7 @@ let english100 = `<layout>
         <key glyph="0" secondGlyph=")" keyCode="Digit0" size="width-1"/>
         <key glyph="-" secondGlyph="_" keyCode="Minus" size="width-1"/>
         <key glyph="=" secondGlyph="+" keyCode="Equal" size="width-1"/>
-        <key glyph="BCKSPC" secondGlyph="" keyCode="Backspace" size="width-4"/>
+        <key glyph="BCKSPC" secondGlyph="" keyCode="Backspace" size="width-5"/>
     </keyGroup>
     <keyGroup>
         <key glyph="INS" keyCode="Insert" size="width-1"/>
@@ -111,9 +111,9 @@ let english100 = `<layout>
     <keyGroup />
     <keyGroup />
     <keyGroup>
-        <key glyph="7" keyCode="Numpad7" size="width-1"/>
-        <key glyph="8" keyCode="Numpad8" size="width-1"/>
-        <key glyph="9" keyCode="Numpad9" size="width-1"/>
+        <key glyph="4" keyCode="Numpad4" size="width-1"/>
+        <key glyph="5" keyCode="Numpad5" size="width-1"/>
+        <key glyph="6" keyCode="Numpad6" size="width-1"/>
         <key glyph="+" keyCode="NumpadAdd" size="width-1"/>
     </keyGroup>
 </row>

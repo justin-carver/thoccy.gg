@@ -20,14 +20,18 @@ const Thoccy = () => {
 
     document.addEventListener('keydown', function(event){
         setFiredEvent(event);
-        document.getElementById(event.code).classList.remove('Thoccy__Key--pressed');
-        document.getElementById(event.code).classList.remove('Thoccy__Key--blank');
-        document.getElementById(event.code).classList.add('Thoccy__Key--held');
+        [...document.querySelectorAll(`#${event.code}`)].map(key => {
+            key.classList.remove('Thoccy__Key--pressed');
+            key.classList.remove('Thoccy__Key--blank');
+            key.classList.add('Thoccy__Key--held');
+        });
     });
 
     document.addEventListener('keyup', function(event){
-        document.getElementById(event.code).classList.remove('Thoccy__Key--held');
-        document.getElementById(event.code).classList.add('Thoccy__Key--pressed');
+        [...document.querySelectorAll(`#${event.code}`)].map(key => {
+            key.classList.remove('Thoccy__Key--held');
+            key.classList.add('Thoccy__Key--pressed');
+        });
     });
 
     return (
