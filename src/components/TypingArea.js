@@ -1,15 +1,19 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const TypingArea = () => {
 
-    const getPlaceholder = () => {
-        let arr = ['The quick brown fox jumped over the lazy dog.', 'Jackdaws love my big sphinx of quartz.', 'Sphinx of black quartz, judge my vow.'];
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
+    const [taPlaceholder, setTextareaPlaceholder] = useState('');
+
+    useEffect(() => {
+        const arr = ['The quick brown fox jumped over the lazy dog.', 'Jackdaws love my big sphinx of quartz.', 'Sphinx of black quartz, judge my vow.'];
+        setTextareaPlaceholder(arr[Math.floor(Math.random() * arr.length)]);
+    }, []);
 
     return (
+        // getPlaceholder getting called on every key press??
         <div className="typing-area">
-            <motion.textarea type="text" placeholder={getPlaceholder()} animate={{
+            <motion.textarea type="text" placeholder={taPlaceholder} animate={{
                 opacity : 1
             }}
             initial={{

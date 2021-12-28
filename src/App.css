@@ -8,10 +8,6 @@
   padding: 5em;
 }
 
-.blank-key {
-  width: 3rem;
-}
-
 .carat {
   background-color: #FEFEFE;
   display: inline-block;
@@ -19,6 +15,10 @@
   margin-left: 0.5rem;
   margin-top: 0.7rem;
   width: 1rem;
+}
+
+.reg {
+  
 }
 
 .light-mode {
@@ -56,6 +56,7 @@
   border-radius: 0.4rem;
   border: solid 2px #FEFEFE;
   display: flex;
+  flex-direction: column-reverse;
   height: 3em;
   justify-content: center;
   width: 3em;
@@ -74,6 +75,30 @@
 
 .left-side {
   min-width: 40%;
+}
+
+.blank {
+  opacity : 0.3 !important;
+}
+
+.held {
+  opacity: 1 !important;
+  background-color: #6B4EE6;
+  transition: all 0.3s ease-out;
+  box-shadow: -1px 10px 46px -9px rgba(255, 255, 255,0.95);
+  -webkit-box-shadow: -1px 10px 46px -9px rgba(255, 255, 255 ,0.95);
+  -moz-box-shadow: -1px 10px 46px -9px rgba(255, 255, 255,0.95);
+}
+
+.pressed {
+  opacity : 1 !important;
+  background-color: #4f5b69;
+  color: #FEFEFE;
+  border-color: #6B4EE6 !important;
+  transition: all 0.3s ease-out;
+  box-shadow: -1px 10px 46px -5px rgba(107,78,230,0.95);
+  -webkit-box-shadow: -1px 10px 46px -5px rgba(107,78,230,0.95);
+  -moz-box-shadow: -1px 10px 46px -5px rgba(107,90,230,0.95);
 }
 
 .subtitle {

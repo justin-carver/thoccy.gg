@@ -1,21 +1,31 @@
 import _ from 'lodash';
 import { motion } from 'framer-motion';
 import XMLToReact from 'xml-to-react';
-import { english60 } from '../conf/layouts.js'
+import { english100 } from '../conf/layouts.js'
 import Key from './Key';
 
 // ! Thoccy should not be generating <Key /> components from scratch.
 const Thoccy = () => {
 
-    // Create new "keyLength" prop to pass to CSS width properties for big keys. {Shift, Tab, Enter, Space}
     const xmlToReact = new XMLToReact({
         layout : (attrs) => ({ type: motion.div, props: {...attrs, className : "layout"}}),
         row: (attrs) => ({ type: motion.div, props: {...attrs, className : "row"}}),
         keyGroup: (attrs) => ({ type: motion.div, props: {...attrs, className : "key-group"}}),
-        key : (attrs) => ({ type: Key, props : {...attrs, className : "Key"}})
+        key : (attrs) => ({ type: Key, props : {...attrs, className : `Key`}})
     });
 
-    const reactTree = xmlToReact.convert(english60);
+    const reactTree = xmlToReact.convert(english100);
+
+    document.addEventListener('keydown', function(event){
+        document.getElementById(event.code).classList.remove('pressed');
+        document.getElementById(event.code).classList.remove('blank');
+        document.getElementById(event.code).classList.add('held');
+    });
+
+    document.addEventListener('keyup', function(event){
+        document.getElementById(event.code).classList.remove('held');
+        document.getElementById(event.code).classList.add('pressed');
+    });
 
     return (
         <motion.div className="Thoccy">
