@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { english100 } from '../conf/layouts.js'
+import { english100 } from '../conf/layouts.js'; // keyboard layouts
 import XMLToReact from 'xml-to-react';
 import Key from './Key';
 
-// ! Thoccy should not be generating <Key /> components from scratch.
 const Thoccy = () => {
 
     const [firedEvent, setFiredEvent] = useState('');
@@ -19,10 +18,12 @@ const Thoccy = () => {
     const reactTree = xmlToReact.convert(english100);
 
     document.addEventListener('keydown', function(event){
+        console.log(event);
+        event.preventDefault();
         setFiredEvent(event);
         [...document.querySelectorAll(`#${event.code}`)].map(key => {
             key.classList.remove('Thoccy__Key--pressed');
-            key.classList.remove('Thoccy__Key--blank');
+            key.classList.remove('Thoccy__Key--untouched');
             key.classList.add('Thoccy__Key--held');
         });
     });

@@ -65,8 +65,9 @@
 .Thoccy {
   color: #FEFEFE;
   display: flex;
-  height: auto;
-  width: 70%;
+  justify-content: center;
+  position: relative;
+  scale: calc(70% - 100vw);
 }
 
 .Thoccy__Key {
@@ -81,7 +82,8 @@
 }
 
 .Thoccy__Key--blank {
-  opacity : 0.3 !important;
+  border: none;
+  width: 3.25rem !important;
 }
 
 .Thoccy__Key--held {
@@ -104,12 +106,16 @@
   -moz-box-shadow: -1px 10px 35px -5px rgba(107,90,230,0.95); */
 }
 
+.Thoccy__Key--untouched {
+  opacity : 0.3 !important;
+}
+
 .Thoccy__Key--width-1 {
   width: 3rem !important;
 }
 
 .Thoccy__Key--width-2 {
-  width: 3.5rem !important;
+  width: 4rem !important;
 }
 
 .Thoccy__Key--width-3 {
@@ -125,11 +131,23 @@
 }
 
 .Thoccy__Key--width-6 {
-  width: 8rem !important;
+  width: 11rem !important;
 }
 
 .Thoccy__Key--width-7 {
-  width: 10rem !important;
+  width: 13rem !important;
+}
+
+.Thoccy__Key--width-8 {
+  width: 16rem !important;
+}
+
+.Thoccy__Key--width-9 {
+  width: 20rem !important;
+}
+
+.Thoccy__Key--width-10 {
+  width: 24.8rem !important;
 }
 
 .Thoccy__key-group {
@@ -141,7 +159,6 @@
 .Thoccy__row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
   margin-top: 1rem;
 }
